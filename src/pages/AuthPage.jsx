@@ -17,6 +17,15 @@ export default function AuthPage({ onLoginSuccess, navigateTo, initialMode = "lo
   const [toast, setToast] = useState({ message: "", type: "", visible: false });
   const [shake, setShake] = useState(false);
 
+  // If user is already logged in, redirect them to profile
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session && navigateTo) {
+        navigateTo('profile');
+      }
+    });
+  }, [navigateTo]);
+
   // Floating label active states
   const [focused, setFocused] = useState({});
 
@@ -124,14 +133,17 @@ export default function AuthPage({ onLoginSuccess, navigateTo, initialMode = "lo
     
     try {
       let authError = null;
+      let sessionData = null;
+
       if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { error, data } = await supabase.auth.signInWithPassword({
           email: formData.email,
           password: formData.password,
         });
         authError = error;
+        sessionData = data;
       } else {
-        const { error } = await supabase.auth.signUp({
+        const { error, data } = await supabase.auth.signUp({
           email: formData.email,
           password: formData.password,
           options: {
@@ -142,6 +154,7 @@ export default function AuthPage({ onLoginSuccess, navigateTo, initialMode = "lo
           }
         });
         authError = error;
+        sessionData = data;
       }
 
       setIsLoading(false);
@@ -155,6 +168,16 @@ export default function AuthPage({ onLoginSuccess, navigateTo, initialMode = "lo
 
       setIsSuccess(true);
       
+      // If session is null after signup, email confirmation is required!
+      if (!isLogin && sessionData?.user && !sessionData?.session) {
+        showToast("Account created! Please check your email to verify.", "info");
+        setTimeout(() => {
+          setIsSuccess(false);
+          setIsLogin(true); // Switch to login mode
+        }, 2000);
+        return;
+      }
+
       showToast(isLogin ? "Welcome back! Redirecting..." : "Account created! Welcome to EduRank 🎉", "success");
       
       setTimeout(() => {

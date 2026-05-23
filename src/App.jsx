@@ -213,8 +213,9 @@ export default function App() {
     // Set initial state based on URL or default to home
     const params = new URLSearchParams(window.location.search);
     const initialView = params.get('view') || "home";
+    const currentHash = window.location.hash; // Preserve Supabase OAuth tokens!
     setView(initialView);
-    window.history.replaceState({ view: initialView }, "", `?view=${initialView}`);
+    window.history.replaceState({ view: initialView }, "", `?view=${initialView}${currentHash}`);
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
