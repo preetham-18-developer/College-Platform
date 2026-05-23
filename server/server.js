@@ -19,6 +19,8 @@ app.use(express.json());
 
 // Routes
 app.use('/api/chat', chatRoutes);
+app.use('/chat', chatRoutes); // Vercel might strip the /api prefix
+app.use('/', chatRoutes); // Vercel might strip the /api/chat prefix entirely
 
 // Health check
 app.get('/api/health', (req, res) => {
