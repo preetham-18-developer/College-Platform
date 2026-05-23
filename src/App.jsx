@@ -1337,7 +1337,7 @@ function Chatbot({ isOpen, setIsOpen, history, setHistory }) {
         ...newHistory.slice(-5) // Only send last 5 messages for context to save tokens
       ];
 
-      const res = await fetch("http://localhost:5000/api/chat", {
+      const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: apiMessages })
