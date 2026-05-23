@@ -1,0 +1,185 @@
+const collegesPart2 = [
+
+  {
+    id: 31,
+    name: "VIT Vellore",
+    category: "VIT",
+    city: "Vellore",
+    state: "Tamil Nadu",
+    location: "Vellore, Tamil Nadu",
+    fees: 198000,
+    rating: 4.5,
+    placements: "11 LPA",
+    nirfRank: 11,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Cyber Security", "AI & ML"],
+    reviews: 2200,
+    officialWebsite: "https://vit.ac.in",
+    description: "Top private engineering university with huge placements."
+  },
+
+  {
+    id: 32,
+    name: "VIT AP University",
+    category: "VIT",
+    city: "Amaravati",
+    state: "Andhra Pradesh",
+    location: "Amaravati, Andhra Pradesh",
+    fees: 185000,
+    rating: 4.4,
+    placements: "9 LPA",
+    nirfRank: 52,
+    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+    courses: ["AI", "CSE", "ECE"],
+    reviews: 1200,
+    officialWebsite: "https://vitap.ac.in",
+    description: "Modern campus with strong startup culture."
+  },
+
+  {
+    id: 33,
+    name: "MIT Manipal",
+    category: "MIT",
+    city: "Manipal",
+    state: "Karnataka",
+    location: "Manipal, Karnataka",
+    fees: 350000,
+    rating: 4.6,
+    placements: "10 LPA",
+    nirfRank: 14,
+    image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "IT", "Mechanical"],
+    reviews: 1800,
+    officialWebsite: "https://manipal.edu",
+    description: "Premium private engineering college with global exposure."
+  },
+
+  {
+    id: 34,
+    name: "BITS Pilani",
+    category: "BITS",
+    city: "Pilani",
+    state: "Rajasthan",
+    location: "Pilani, Rajasthan",
+    fees: 480000,
+    rating: 4.9,
+    placements: "30 LPA",
+    nirfRank: 7,
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "Chemical"],
+    reviews: 1700,
+    officialWebsite: "https://www.bits-pilani.ac.in",
+    description: "Top private engineering institute with elite placements."
+  },
+
+  {
+    id: 35,
+    name: "SRM University",
+    category: "Private",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    location: "Chennai, Tamil Nadu",
+    fees: 250000,
+    rating: 4.4,
+    placements: "9 LPA",
+    nirfRank: 21,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["AI", "CSE", "Biotechnology"],
+    reviews: 1900,
+    officialWebsite: "https://www.srmist.edu.in",
+    description: "Large private university with international collaborations."
+  },
+
+  {
+    id: 36,
+    name: "KL University",
+    category: "Private",
+    city: "Vijayawada",
+    state: "Andhra Pradesh",
+    location: "Vijayawada, Andhra Pradesh",
+    fees: 165000,
+    rating: 4.3,
+    placements: "8 LPA",
+    nirfRank: 44,
+    image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "AI", "Data Science"],
+    reviews: 1500,
+    officialWebsite: "https://www.kluniversity.in",
+    description: "Popular private university with strong placement records."
+  },
+
+  {
+    id: 37,
+    name: "Amrita Vishwa Vidyapeetham",
+    category: "University",
+    city: "Coimbatore",
+    state: "Tamil Nadu",
+    location: "Coimbatore, Tamil Nadu",
+    fees: 240000,
+    rating: 4.5,
+    placements: "9 LPA",
+    nirfRank: 19,
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Cyber Security", "ECE"],
+    reviews: 1400,
+    officialWebsite: "https://www.amrita.edu",
+    description: "Top private deemed university known for research."
+  },
+
+  {
+    id: 38,
+    name: "JNTU Hyderabad",
+    category: "JNTU",
+    city: "Hyderabad",
+    state: "Telangana",
+    location: "Hyderabad, Telangana",
+    fees: 85000,
+    rating: 4.5,
+    placements: "8 LPA",
+    nirfRank: 62,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "EEE"],
+    reviews: 1200,
+    officialWebsite: "https://jntuh.ac.in",
+    description: "Top technical university in Telangana."
+  },
+
+  {
+    id: 39,
+    name: "JNTU Kakinada",
+    category: "JNTU",
+    city: "Kakinada",
+    state: "Andhra Pradesh",
+    location: "Kakinada, Andhra Pradesh",
+    fees: 75000,
+    rating: 4.4,
+    placements: "7 LPA",
+    nirfRank: 89,
+    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "IT", "Mechanical"],
+    reviews: 980,
+    officialWebsite: "https://jntuk.edu.in",
+    description: "Premier state technical university in Andhra Pradesh."
+  },
+
+  {
+    id: 40,
+    name: "Andhra University",
+    category: "University",
+    city: "Visakhapatnam",
+    state: "Andhra Pradesh",
+    location: "Visakhapatnam, Andhra Pradesh",
+    fees: 65000,
+    rating: 4.3,
+    placements: "6 LPA",
+    nirfRank: 45,
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "IT", "Civil"],
+    reviews: 890,
+    officialWebsite: "https://www.andhrauniversity.edu.in",
+    description: "Historic university with strong engineering programs."
+  }
+
+]
+
+export default collegesPart2

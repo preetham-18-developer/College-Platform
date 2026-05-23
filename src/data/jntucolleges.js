@@ -1,0 +1,185 @@
+const jntuColleges = [
+
+  {
+    id: 1001,
+    name: "JNTU Hyderabad",
+    category: "JNTU",
+    city: "Hyderabad",
+    state: "Telangana",
+    location: "Hyderabad, Telangana",
+    fees: 85000,
+    rating: 4.5,
+    placements: "8 LPA",
+    nirfRank: 62,
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "EEE", "Mechanical", "Civil"],
+    reviews: 1200,
+    officialWebsite: "https://jntuh.ac.in",
+    description: "One of the top technical universities in Telangana with strong placements and research."
+  },
+
+  {
+    id: 1002,
+    name: "JNTU Kakinada",
+    category: "JNTU",
+    city: "Kakinada",
+    state: "Andhra Pradesh",
+    location: "Kakinada, Andhra Pradesh",
+    fees: 75000,
+    rating: 4.4,
+    placements: "7 LPA",
+    nirfRank: 89,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "IT", "Mechanical", "Civil"],
+    reviews: 980,
+    officialWebsite: "https://jntuk.edu.in",
+    description: "Premier engineering university in Andhra Pradesh known for academics and innovation."
+  },
+
+  {
+    id: 1003,
+    name: "JNTUA Anantapur",
+    category: "JNTU",
+    city: "Anantapur",
+    state: "Andhra Pradesh",
+    location: "Anantapur, Andhra Pradesh",
+    fees: 70000,
+    rating: 4.2,
+    placements: "6 LPA",
+    nirfRank: 110,
+    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "Civil", "Mechanical"],
+    reviews: 750,
+    officialWebsite: "https://jntua.ac.in",
+    description: "Well-established technical university serving Rayalaseema region."
+  },
+
+  {
+    id: 1004,
+    name: "JNTUH College of Engineering Hyderabad",
+    category: "JNTU",
+    city: "Hyderabad",
+    state: "Telangana",
+    location: "Kukatpally, Hyderabad, Telangana",
+    fees: 90000,
+    rating: 4.6,
+    placements: "10 LPA",
+    nirfRank: 58,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "AI & ML", "Data Science", "ECE"],
+    reviews: 1500,
+    officialWebsite: "https://jntuhceh.ac.in",
+    description: "Flagship engineering college under JNTUH with excellent coding culture and placements."
+  },
+
+  {
+    id: 1005,
+    name: "JNTUK University College of Engineering Kakinada",
+    category: "JNTU",
+    city: "Kakinada",
+    state: "Andhra Pradesh",
+    location: "Kakinada, Andhra Pradesh",
+    fees: 78000,
+    rating: 4.4,
+    placements: "7.5 LPA",
+    nirfRank: 95,
+    image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "IT", "ECE", "Mechanical"],
+    reviews: 920,
+    officialWebsite: "https://ucek.jntuk.edu.in",
+    description: "Top constituent engineering college under JNTUK."
+  },
+
+  {
+    id: 1006,
+    name: "JNTUA College of Engineering Anantapur",
+    category: "JNTU",
+    city: "Anantapur",
+    state: "Andhra Pradesh",
+    location: "Anantapur, Andhra Pradesh",
+    fees: 72000,
+    rating: 4.3,
+    placements: "6.5 LPA",
+    nirfRank: 118,
+    image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "EEE", "ECE", "Mechanical"],
+    reviews: 680,
+    officialWebsite: "https://jntuacea.ac.in",
+    description: "Government engineering institution with strong technical foundation."
+  },
+
+  {
+    id: 1007,
+    name: "JNTUH College of Engineering Sultanpur",
+    category: "JNTU",
+    city: "Sultanpur",
+    state: "Telangana",
+    location: "Sultanpur, Telangana",
+    fees: 65000,
+    rating: 4.1,
+    placements: "5 LPA",
+    nirfRank: 145,
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "Civil"],
+    reviews: 520,
+    officialWebsite: "https://jntuhces.ac.in",
+    description: "Emerging engineering campus under JNTUH."
+  },
+
+  {
+    id: 1008,
+    name: "JNTUH University College of Engineering Manthani",
+    category: "JNTU",
+    city: "Peddapalli",
+    state: "Telangana",
+    location: "Manthani, Peddapalli, Telangana",
+    fees: 60000,
+    rating: 4.0,
+    placements: "4.5 LPA",
+    nirfRank: 170,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Mechanical", "Mining"],
+    reviews: 410,
+    officialWebsite: "https://jntuhucem.ac.in",
+    description: "Technical institution under JNTUH focused on core engineering branches."
+  },
+
+  {
+    id: 1009,
+    name: "JNTUK Narasaraopeta Engineering College",
+    category: "JNTU",
+    city: "Narasaraopeta",
+    state: "Andhra Pradesh",
+    location: "Narasaraopeta, Andhra Pradesh",
+    fees: 58000,
+    rating: 4.0,
+    placements: "4 LPA",
+    nirfRank: 185,
+    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "Civil"],
+    reviews: 360,
+    officialWebsite: "https://jntukn.ac.in",
+    description: "Regional engineering campus under JNTUK."
+  },
+
+  {
+    id: 1010,
+    name: "JNTUA Oil Technological and Pharmaceutical Research Institute",
+    category: "JNTU",
+    city: "Anantapur",
+    state: "Andhra Pradesh",
+    location: "Anantapur, Andhra Pradesh",
+    fees: 68000,
+    rating: 4.1,
+    placements: "5 LPA",
+    nirfRank: 150,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    courses: ["Pharmaceutical", "Chemical", "Biotechnology"],
+    reviews: 470,
+    officialWebsite: "https://jntuotpri.ac.in",
+    description: "Specialized institute focused on pharmaceutical and chemical engineering."
+  }
+
+]
+
+export default jntuColleges

@@ -1,0 +1,185 @@
+const collegesPart1 = [
+
+  {
+    id: 1,
+    name: "IIT Bombay",
+    category: "IIT",
+    city: "Mumbai",
+    state: "Maharashtra",
+    location: "Mumbai, Maharashtra",
+    fees: 220000,
+    rating: 4.9,
+    placements: "25 LPA",
+    nirfRank: 3,
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "AI & ML", "Mechanical"],
+    reviews: 1500,
+    officialWebsite: "https://www.iitb.ac.in",
+    description: "Premier IIT with global recognition."
+  },
+
+  {
+    id: 2,
+    name: "IIT Delhi",
+    category: "IIT",
+    city: "New Delhi",
+    state: "Delhi",
+    location: "New Delhi, Delhi",
+    fees: 225000,
+    rating: 4.8,
+    placements: "24 LPA",
+    nirfRank: 2,
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Civil", "Data Science"],
+    reviews: 1450,
+    officialWebsite: "https://home.iitd.ac.in",
+    description: "Top engineering institute with startup ecosystem."
+  },
+
+  {
+    id: 3,
+    name: "IIT Madras",
+    category: "IIT",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    location: "Chennai, Tamil Nadu",
+    fees: 215000,
+    rating: 4.9,
+    placements: "22 LPA",
+    nirfRank: 1,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Aerospace", "AI"],
+    reviews: 1600,
+    officialWebsite: "https://www.iitm.ac.in",
+    description: "India's #1 engineering institute."
+  },
+
+  {
+    id: 4,
+    name: "IIT Kanpur",
+    category: "IIT",
+    city: "Kanpur",
+    state: "Uttar Pradesh",
+    location: "Kanpur, Uttar Pradesh",
+    fees: 215000,
+    rating: 4.8,
+    placements: "23 LPA",
+    nirfRank: 4,
+    image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Electrical", "Mechanical"],
+    reviews: 1200,
+    officialWebsite: "https://www.iitk.ac.in",
+    description: "Strong coding culture and academics."
+  },
+
+  {
+    id: 5,
+    name: "IIT Kharagpur",
+    category: "IIT",
+    city: "Kharagpur",
+    state: "West Bengal",
+    location: "Kharagpur, West Bengal",
+    fees: 210000,
+    rating: 4.8,
+    placements: "20 LPA",
+    nirfRank: 5,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    courses: ["Architecture", "CSE", "Agricultural"],
+    reviews: 1300,
+    officialWebsite: "https://www.iitkgp.ac.in",
+    description: "First IIT established in India."
+  },
+
+  {
+    id: 6,
+    name: "IIT Roorkee",
+    category: "IIT",
+    city: "Roorkee",
+    state: "Uttarakhand",
+    location: "Roorkee, Uttarakhand",
+    fees: 205000,
+    rating: 4.7,
+    placements: "19 LPA",
+    nirfRank: 6,
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["Civil", "CSE", "Electronics"],
+    reviews: 1100,
+    officialWebsite: "https://www.iitr.ac.in",
+    description: "Historic engineering institute."
+  },
+
+  {
+    id: 7,
+    name: "NIT Trichy",
+    category: "NIT",
+    city: "Tiruchirappalli",
+    state: "Tamil Nadu",
+    location: "Tiruchirappalli, Tamil Nadu",
+    fees: 165000,
+    rating: 4.7,
+    placements: "15 LPA",
+    nirfRank: 9,
+    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "ECE", "Mechanical"],
+    reviews: 980,
+    officialWebsite: "https://www.nitt.edu",
+    description: "Best NIT in India."
+  },
+
+  {
+    id: 8,
+    name: "NIT Warangal",
+    category: "NIT",
+    city: "Warangal",
+    state: "Telangana",
+    location: "Warangal, Telangana",
+    fees: 160000,
+    rating: 4.6,
+    placements: "14 LPA",
+    nirfRank: 12,
+    image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "IT", "ECE"],
+    reviews: 870,
+    officialWebsite: "https://www.nitw.ac.in",
+    description: "Top NIT with strong placements."
+  },
+
+  {
+    id: 9,
+    name: "NIT Surathkal",
+    category: "NIT",
+    city: "Mangalore",
+    state: "Karnataka",
+    location: "Mangalore, Karnataka",
+    fees: 165000,
+    rating: 4.6,
+    placements: "15 LPA",
+    nirfRank: 10,
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    courses: ["CSE", "Mining", "Mechanical"],
+    reviews: 900,
+    officialWebsite: "https://www.nitk.ac.in",
+    description: "Top coastal engineering institute."
+  },
+
+  {
+    id: 10,
+    name: "IIIT Hyderabad",
+    category: "IIIT",
+    city: "Hyderabad",
+    state: "Telangana",
+    location: "Hyderabad, Telangana",
+    fees: 320000,
+    rating: 4.8,
+    placements: "28 LPA",
+    nirfRank: 12,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    courses: ["AI", "CSE", "Data Science"],
+    reviews: 1150,
+    officialWebsite: "https://www.iiit.ac.in",
+    description: "Elite institute focused on AI and computer science."
+  }
+
+]
+
+export default collegesPart1
