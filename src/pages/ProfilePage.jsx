@@ -101,8 +101,8 @@ export default function ProfilePage({ navigateTo, onSignOut }) {
           setUser(prev => ({
             ...prev,
             id: session.user.id,
-            name: profile.full_name || session.user.user_metadata?.full_name || "Enter Name",
-            displayName: profile.display_name || "user",
+            name: profile.full_name || session.user.user_metadata?.full_name || session.user.user_metadata?.name || session.user.email?.split('@')[0] || "Enter Name",
+            displayName: profile.display_name || session.user.email?.split('@')[0] || "user",
             email: profile.email || session.user.email,
             phone: profile.phone || "",
             city: profile.city || "",
@@ -136,7 +136,7 @@ export default function ProfilePage({ navigateTo, onSignOut }) {
           setUser(prev => ({
             ...prev,
             id: session.user.id,
-            name: session.user.user_metadata?.full_name || "Enter Name",
+            name: session.user.user_metadata?.full_name || session.user.user_metadata?.name || session.user.email?.split('@')[0] || "Enter Name",
             email: session.user.email,
           }));
           setActiveSection("settings");
@@ -149,7 +149,7 @@ export default function ProfilePage({ navigateTo, onSignOut }) {
         if (session) {
            setUser(prev => ({
              ...prev,
-             name: session.user.user_metadata?.full_name || "Enter Name",
+             name: session.user.user_metadata?.full_name || session.user.user_metadata?.name || session.user.email?.split('@')[0] || "Enter Name",
              email: session.user.email,
            }));
         }
